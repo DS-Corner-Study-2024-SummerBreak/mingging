@@ -95,6 +95,43 @@
       font-weight: 800;
       text-decoration: none;
     }
+
+    .mobile_img {
+      display: none;
+    }
+
+    .desktop_img {
+      display: inline;
+    }
+
+    @media only screen and (max-width: 768px) {
+      .content {
+        width: 350px;
+        flex-direction: column;
+        height: 560px;
+      }
+
+      .mobile_img {
+        display: inline;
+      }
+
+      .desktop_img {
+        display: none;
+      }
+
+      .content_txt {
+        width: 300px;
+        margin: 0;
+      }
+
+      .content img {
+        border-radius: 10px 10px 0 0;
+      }
+
+      .add_btn {
+        width: 300px
+      }
+    }
   </style>
 </head>
 
@@ -102,7 +139,8 @@
 
   <div class="content">
     <div>
-      <img src="images/image-product-desktop.jpg" width="250">
+      <img src="images/image-product-desktop.jpg" width="250" class="desktop_img">
+      <img src="images/image-product-mobile.jpg" width="350" class="mobile_img">
     </div>
     <div class="content_txt">
       <p class="category">PERFUME</p>
