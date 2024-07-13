@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    body {
+      height: 100vh;
+      background-color: rgb(249, 240, 229);
+      font-size: small;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    .content {
+      display: flex;
+      align-items: center;
+      width: 500px;
+      border-radius: 10px;
+      background-color: white;
+      height: 375px;
+    }
+
+    .content img {
+      border-radius: 10px 0 0 10px;
+    }
+
+    .content_txt {
+      width: 200px;
+      margin-left: 25px;
+    }
+
+    .title {
+      line-height: 25px;
+      width: 80%;
+    }
+
+    .category {
+      letter-spacing: 5px;
+    }
+
+    .price {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      margin: 20px 0;
+
+    }
+
+    .n_price {
+      font-size: 30px;
+      font-weight: 800;
+      margin: 0;
+      color: green;
+    }
+
+    .p_price {
+      text-decoration-line: line-through;
+      margin: 0 0 0 20px;
+    }
+
+    .add_btn {
+      width: 200px;
+      height: 40px;
+      border-radius: 10px;
+      background-color: rgb(0, 87, 0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .add_btn a:visited,
+    .add_btn a:link {
+      color: white;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .mobile_img {
+      display: none;
+    }
+
+    .desktop_img {
+      display: inline;
+    }
+
+    @media only screen and (max-width: 768px) {
+      .content {
+        width: 350px;
+        flex-direction: column;
+        height: 560px;
+      }
+
+      .mobile_img {
+        display: inline;
+      }
+
+      .desktop_img {
+        display: none;
+      }
+
+      .content_txt {
+        width: 300px;
+        margin: 0;
+      }
+
+      .content img {
+        border-radius: 10px 10px 0 0;
+      }
+
+      .add_btn {
+        width: 300px
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="content">
+    <div>
+      <img src="images/image-product-desktop.jpg" width="250" class="desktop_img">
+      <img src="images/image-product-mobile.jpg" width="350" class="mobile_img">
+    </div>
+    <div class="content_txt">
+      <p class="category">PERFUME</p>
+      <h1 class="title">Gabrielle Essence Eau De Parfum</h1>
+      <p>A floral, solar and voluptuous interpretation composed by Olivier Polge,
+        Perfumer-Creator for the House of CHANEL.</p>
+      <div class="price">
+        <p class="n_price">$149.99</p>
+        <p class="p_price">$169.99</p>
+      </div>
+
+      <div class="add_btn"><a href="#">Add to Cart</a></div>
+    </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">mingging</a>.
+  </div>
+</body>
+
+</html>
