@@ -64,6 +64,14 @@
       font-size: small;
     }
 
+    .loginBtn a:hover {
+      color: black
+    }
+
+    .aboutBtn a:hover {
+      color: black
+    }
+
     .user {
       display: flex;
       position: absolute;
@@ -72,6 +80,8 @@
     }
 
     .regiserBtn {
+      position: relative;
+      bottom: 5px;
       margin-left: 20px;
       border: 1px solid gray;
       padding: 5px 15px;
@@ -200,11 +210,11 @@
         </svg>
       </li>
       <li><a href="#">Careers</a></li>
-      <li><a href="#" class="hover about">About</a></li>
+      <li class="aboutBtn"><a href="#">About</a></li>
     </ul>
 
     <div class="user">
-      <div class="loginBtn hover"><a href="#">Login</a></div>
+      <div class="loginBtn"><a href="#">Login</a></div>
       <div class="regiserBtn hoverBtn"><a href="#">Register</a></div>
     </div>
   </div>
