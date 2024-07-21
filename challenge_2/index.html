@@ -193,7 +193,7 @@
           <path stroke="#686868" stroke-width="1.5" fill="none" d="m1 1 4 4 4-4" />
         </svg>
       </li>
-      <li class="arrow hover">
+      <li class="arrow hover" id="companyBtn">
         Company
         <svg width="10" height="6" xmlns="http://www.w3.org/2000/svg">
           <path stroke="#686868" stroke-width="1.5" fill="none" d="m1 1 4 4 4-4" />
@@ -278,20 +278,34 @@
     </div>
   </div>
   <script>
-    document.addEventListener('featuresModalOpen', (event) => {
-      const button = document.getElementById('featuresBtn');
-      const modal = document.getElementById('featuresModal');
+    let featuresBtn = document.getElementById("featuresBtn");
+    let featuresModal = document.getElementById("featuresModal");
+    let companyBtn = document.getElementById("companyBtn");
+    let companyModal = document.getElementById("companyModal");
+    let featuresFlag = 0;
+    let companyFlag = 0;
 
-      button.addEventListener('mouseenter', () => {
-        modal.style.display = 'block';
-      });
+    function showFeaturesModal(e) {
+      featuresModal.style.display = "block";
+    }
 
-      button.addEventListener('mouseleave', () => {
-        modal.style.display = 'none';
-      });
-    });
+    function hideFeaturesModal(e) {
+      featuresModal.style.display = "none";
+    }
 
-    setInterval('featuresModalOpen', 1000);
+    featuresBtn.addEventListener("mouseover", showFeaturesModal);
+    featuresBtn.addEventListener("mouseout", hideFeaturesModal);
+
+    function showCompanyModal(e) {
+      companyModal.style.display = "block";
+    }
+
+    function hideCompanyModal(e) {
+      companyModal.style.display = "none";
+    }
+
+    companyBtn.addEventListener("mouseover", showCompanyModal);
+    companyBtn.addEventListener("mouseout", hideCompanyModal);
   </script>
 </body>
 
